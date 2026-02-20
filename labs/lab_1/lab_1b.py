@@ -45,6 +45,14 @@ def request_santized_number(prompt: str) -> float:
         except ValueError:
             print("Invalid input. Please enter a valid number.")
 
+valid_operations = ["add", "subtract", "multiply", "divide"]
+
+operation = input("Enter operation (add, subtract, multiply, divide): ").strip().lower()
+
+while operation not in valid_operations:
+    print("Invalid operation. Please enter add, subtract, multiply, or divide.")
+    operation = input("Enter operation (add, subtract, multiply, divide): ").strip().lower()
+
 def main():
     
     print(f"===== Simple Calculator =====")
